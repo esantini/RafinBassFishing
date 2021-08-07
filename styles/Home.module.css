@@ -215,6 +215,7 @@ section.facebook {
 .gallery {
   color: #fff;
   background: #4f4f4f;
+  position: relative;
 
   background: -webkit-radial-gradient(
     circle,
