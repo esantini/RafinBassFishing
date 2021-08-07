@@ -8,7 +8,7 @@ import Location from '../components/Location';
 import Gallery from '../components/Gallery';
 import styles from '../styles/Home.module.css';
 
-const prod = false; // TODO env === prod
+const prod = true; // TODO env === prod
 
 export default function Home() {
   useEffect(() => {

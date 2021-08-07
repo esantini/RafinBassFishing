@@ -1,19 +1,23 @@
+import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 
 export default function FbSection() {
   return (
     <section className={styles.facebook}>
       <h2>JOIN OUR FACEBOOK GROUP</h2>
-      <p className={styles.desc}>Wether you're a fishing enthusiast, a seasoned angler o a pro, our group has hundreds of photos, videos and anecdotes of fun times! Lots of members who just like you, share the love for fishing.</p>
+      <p className={styles.desc}>Wether you&apos;re a fishing enthusiast, a seasoned angler o a pro, our group has hundreds of photos, videos and anecdotes of fun times! Lots of members who just like you, share the love for fishing.</p>
 
       <div>
         <a
           href='https://www.facebook.com/groups/183114718702125/'
           className={styles.join_us}
           target='_blank'
+          rel='noreferrer'
         >
-          <img src='/l_fb.png' />
-          JOIN US!
+          <Image alt='facebook logo' src='/l_fb.png' width='26px' height='26px' />
+          <label>
+            JOIN US!
+          </label>
         </a>
       </div>
       <div

@@ -52,6 +52,7 @@ section.facebook {
 }
 
 .join_us {
+  position: relative;
   display: inline-block;
   font-family: "bebasregular", Arial, sans-serif;
   font-size: 1.3em;
@@ -81,6 +82,10 @@ section.facebook {
   height: 1.2em;
   vertical-align: -0.15em;
   margin-right: 4px;
+}
+.join_us label {
+  vertical-align: middle;
+  margin-left: 5px;
 }
 
 .aboutUs {
