@@ -25,8 +25,18 @@
 
 section.facebook {
   background: url(images/bg_panel_grey50.png) center center repeat;
-  padding-bottom: 5em;
 }
+
+.facebook h2 {
+  font-size: 2.7em;
+  line-height: 3em;
+  line-height: 1.2em;
+  word-spacing: 0.1em;
+  color: #ccc;
+  margin-bottom: 1em;
+  font-weight: 500;
+}
+
 .facebook p.desc {
   margin: 1em auto;
   display: block;
@@ -73,6 +83,47 @@ section.facebook {
   margin-right: 4px;
 }
 
+.aboutUs {
+  position: relative;
+  background: #4f4f4f;
+
+  background: -webkit-radial-gradient(
+    circle,
+    #20232d,
+    #1d1e20
+  ); /* For Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(
+    circle,
+    #20232d,
+    #1d1e20
+  ); /* For Opera 11.1 to 12.0 */
+  background: -moz-radial-gradient(
+    circle,
+    #20232d,
+    #1d1e20
+  ); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(
+    circle,
+    #20232d,
+    #1d1e20
+  ); /* Standard syntax, android  */
+}
+
+.aboutUs p {
+  margin: 1em auto;
+  font-family: "robotolight", Arial, sans-serif;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  color: #ffffff;
+  text-align: left;
+  word-spacing: 1px;
+}
+
+.aboutUs p:last-child {
+  margin: 1.5em 0 0;
+  font-size: 1.3em;
+}
+
 /* About Us */
 .aboutUsBackground {
   position: absolute;
@@ -103,14 +154,6 @@ section.facebook {
 /* Location */
 
 .location {
-  margin: 0 auto;
-  padding: 1%;
-  overflow: hidden;
-  position: relative;
-  float: left;
-  width: 98%;
-  min-height: 100vh;
-
   background: -webkit-linear-gradient(
     0deg,
     #fbfbfb,
@@ -135,10 +178,6 @@ section.facebook {
 
 .location h2 {
   color: #1a1f1b;
-  font-size: 3.5em;
-  padding-bottom: 0em;
-  margin-top: 0;
-  margin-bottom: 0.2em;
 }
 
 .location h3 {
@@ -146,22 +185,56 @@ section.facebook {
   font-size: 2.7em;
   color: #666;
   line-height: 1.3em;
-  margin: 0px;
+  margin: 0.5em 0 0.1em;
 }
 
 .location P {
   color: #111;
 }
 
-.location > div {
+.locationMaps {
+  display: flex;
+  flex-direction: row;
+}
+
+.locationMaps > div {
   width: 48%;
-  overflow: hidden;
-  float: left;
 }
 
 .location iframe {
   border: 0;
-  width: 40%;
-  height: 50%;
-  position: absolute;
+  width: 90%;
+  height: 250px;
+}
+
+.gallery {
+  color: #fff;
+  background: #4f4f4f;
+
+  background: -webkit-radial-gradient(
+    circle,
+    #20232d,
+    #1d1e20
+  ); /* For Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(
+    circle,
+    #20232d,
+    #1d1e20
+  ); /* For Opera 11.1 to 12.0 */
+  background: -moz-radial-gradient(
+    circle,
+    #20232d,
+    #1d1e20
+  ); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(
+    circle,
+    #20232d,
+    #1d1e20
+  ); /* Standard syntax, android  */
+}
+
+.gallery p {
+  font-family: "robotolight", Arial, sans-serif;
+  font-size: 1.2em;
+  word-spacing: 1px;
 }

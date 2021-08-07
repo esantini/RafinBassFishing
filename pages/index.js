@@ -5,11 +5,14 @@ import NavBar from '../components/NavBar';
 import FbSection from '../components/FbSection';
 import AboutUs from '../components/AboutUs';
 import Location from '../components/Location';
+import Gallery from '../components/Gallery';
 import styles from '../styles/Home.module.css';
+
+const prod = false; // TODO env === prod
 
 export default function Home() {
   useEffect(() => {
-    if (typeof document === 'undefined') return;
+    if (typeof document === 'undefined' || !prod) return;
     let d = document, s = 'script', id = 'facebook-jssdk';
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
@@ -44,7 +47,9 @@ export default function Home() {
 
         <AboutUs />
 
-        <Location />
+        <Location prod={prod} />
+
+        <Gallery />
 
       </main>
 

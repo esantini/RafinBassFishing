@@ -65,9 +65,17 @@ header {
   min-height: 35vh;
 }
 
+section {
+  padding: 100px 15px;
+}
+
+header p {
+  margin-inline-start: 0.25em;
+}
+
+H1,
 header p {
   display: inline;
-  margin-inline-start: 0.25em;
   font-size: 1.7em;
   font-weight: 100;
   line-height: 1.4em;
@@ -75,43 +83,25 @@ header p {
   word-spacing: 0.1em;
 }
 
-H1 {
-  /* Rafin Bass Fissing Guides... */
-  display: inline;
-  font-size: 1.7em;
-  font-weight: 100;
-  line-height: 1.4em;
-  letter-spacing: 1px;
-  word-spacing: 0.1em;
-}
-
+/* Section Titles */
 H2 {
-  /* TITULOS SECUNDARIOS */
+  color: #fff;
   font-family: "bebasregular", Arial, sans-serif;
-  font-size: 2.7em;
-  line-height: 3em;
-  word-spacing: 0.1em;
-  color: #ccc;
-
-  padding-top: 2em;
-  margin-bottom: 1em;
-
+  font-size: 3.5em;
   font-weight: 500;
-  text-transform: uppercase;
-
-  line-height: 1.2em;
+  margin: 0;
+  word-spacing: 0.1em;
 }
 
 H3 {
-  /* SUBTITULOS centrados */
+  color: #fff;
   font-family: "bebasregular", Arial, sans-serif;
   font-size: 3.3em;
-  line-height: 1em;
-  word-spacing: 0.2em;
-  color: #fff;
   font-weight: 500;
-  text-transform: uppercase;
+  line-height: 1em;
   margin: 2em 0 3em;
+  text-transform: uppercase;
+  word-spacing: 0.2em;
 }
 
 H5 {
@@ -160,51 +150,4 @@ H5 {
   word-spacing: 0.2em;
   text-decoration: none;
   margin-right: 1em;
-}
-
-#about_us {
-  position: relative;
-  background: #4f4f4f;
-  padding: 100px 15px;
-
-  background: -webkit-radial-gradient(
-    circle,
-    #20232d,
-    #1d1e20
-  ); /* For Safari 5.1 to 6.0 */
-  background: -o-radial-gradient(
-    circle,
-    #20232d,
-    #1d1e20
-  ); /* For Opera 11.1 to 12.0 */
-  background: -moz-radial-gradient(
-    circle,
-    #20232d,
-    #1d1e20
-  ); /* For Firefox 3.6 to 15 */
-  background: radial-gradient(
-    circle,
-    #20232d,
-    #1d1e20
-  ); /* Standard syntax, android  */
-}
-
-#about_us h2 {
-  font-family: "bebasregular", Arial, sans-serif;
-  font-size: 3.5em;
-  word-spacing: 0.1em;
-  font-weight: 500;
-  color: #ffffff;
-  margin-top: 0;
-  padding: 0;
-}
-
-#about_us p {
-  margin: 1em auto;
-  font-family: "robotolight", Arial, sans-serif;
-  font-size: 1.2em;
-  line-height: 1.2em;
-  color: #ffffff;
-  text-align: left;
-  word-spacing: 1px;
 }
