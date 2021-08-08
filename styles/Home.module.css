@@ -244,3 +244,32 @@ section.facebook {
   font-size: 1.2em;
   word-spacing: 1px;
 }
+
+.faq {
+  background: #414141 url(images/bg_faq.jpg) center center repeat;
+  color: #fff;
+  font-family: "robotolight", Arial, sans-serif;
+}
+
+.faq h3 {
+  width: 75%;
+  font-family: "bebasregular", Arial, sans-serif;
+  font-size: 1.7em;
+  line-height: 1.4em;
+  letter-spacing: 1px;
+  word-spacing: 0.1em;
+  color: #5aa1b7;
+  text-align: left;
+  padding: 10px 0 0;
+  margin: 0;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.cols2 {
+  display: flex;
+}
+.cols2 > div {
+  width: 50%;
+  padding: 20px;
+}

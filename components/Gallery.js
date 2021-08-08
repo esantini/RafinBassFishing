@@ -7,7 +7,7 @@ export default function Gallery() {
       <h2>GALLERY</h2>
       <p>Click on image to zoom-in. Enjoy!</p>
       <div style={{ position: 'absolute', top: '100px' }}>
-        <Image src='/construction.png' width='200px' height='100px' />
+        <Image src='/construction.png' width='200px' height='100px' alt="In Construction" />
       </div>
     </section>
   );

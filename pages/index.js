@@ -6,6 +6,7 @@ import FbSection from '../components/FbSection';
 import AboutUs from '../components/AboutUs';
 import Location from '../components/Location';
 import Gallery from '../components/Gallery';
+import Faq from '../components/Faq';
 import styles from '../styles/Home.module.css';
 
 const prod = true; // TODO env === prod
@@ -50,6 +51,8 @@ export default function Home() {
         <Location prod={prod} />
 
         <Gallery />
+
+        <Faq />
 
       </main>
 

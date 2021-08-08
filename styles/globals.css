@@ -151,3 +151,7 @@ H5 {
   text-decoration: none;
   margin-right: 1em;
 }
+
+dt {
+  font-weight: 600;
+}
