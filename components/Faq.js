@@ -5,8 +5,8 @@ export default function Faq() {
     <section className={styles.faq} id="faq" >
       <h2>F.A.Q.</h2>
 
-      <div className={styles.cols2}>
-        <div>
+      <div className="display-flex">
+        <div className={styles.column}>
 
           <h3>Which services do you offer?</h3>
 
@@ -62,7 +62,7 @@ export default function Faq() {
           </dl>
 
         </div>
-        <div>
+        <div className={styles.column}>
 
           <h3>WHAT DO THE FISHING GUIDES INCLUDE?</h3>
           <p>If you choose <strong>BOAT ON THE LAKE</strong>:</p>
@@ -85,7 +85,7 @@ export default function Faq() {
           <p>YES. You can get one at the crossing line for the time that you are gong to be here from many insurance companies. Your USA insurance may not cover MEXICO unless stated.</p>
 
           <h3>IF I GO BY CAR, WILL MEXICO CUSTOMS STOP ME AT THE BORDER LINE?</h3>
-          <p>Once you get to the crossing line in Nogales Arizona by car, Mexico&apos;s customs personnel can ask you questions about the purpose of the trip and may check your belongings. Please this is a fishing trip don&apos;t bring guns into Mexico, and if you do please bring all the documentation needed or you&apos;ll get in trouble, they maight just let you go to the kilometro 21, an office 21 km away from Nogales, Sonora, just go straight in the main road and you go out of the city and keep going until this office where you can get the visa and car permits.<br />
+          <p>Once you get to the crossing line in Nogales Arizona by car, Mexico&apos;s customs personnel can ask you questions about the purpose of the trip and may check your belongings. Please this is a fishing trip don&apos;t bring guns into Mexico, and if you do please bring all the documentation needed or you&apos;ll get in trouble, they might just let you go to the kilometro 21, an office 21 km away from Nogales, Sonora, just go straight in the main road and you go out of the city and keep going until this office where you can get the visa and car permits.<br />
           </p>
           <p>Please have all info in hand so you can call me anytime, be glad to help.</p>
           <p>Rafael Osuna Gallardo</p>

@@ -7,6 +7,7 @@ import AboutUs from '../components/AboutUs';
 import Location from '../components/Location';
 import Gallery from '../components/Gallery';
 import Faq from '../components/Faq';
+import Booking from '../components/Booking';
 import styles from '../styles/Home.module.css';
 
 const prod = true; // TODO env === prod
@@ -54,20 +55,10 @@ export default function Home() {
 
         <Faq />
 
+        <Booking />
+
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
       <div id="fb-root"></div>
     </div>
   )

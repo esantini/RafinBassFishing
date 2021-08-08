@@ -191,6 +191,7 @@ section.facebook {
   color: #666;
   line-height: 1.3em;
   margin: 0.5em 0 0.1em;
+  word-spacing: 0.2em;
 }
 
 .location P {
@@ -253,23 +254,55 @@ section.facebook {
 
 .faq h3 {
   width: 75%;
-  font-family: "bebasregular", Arial, sans-serif;
-  font-size: 1.7em;
-  line-height: 1.4em;
-  letter-spacing: 1px;
-  word-spacing: 0.1em;
-  color: #5aa1b7;
-  text-align: left;
   padding: 10px 0 0;
   margin: 0;
   font-weight: 100;
   text-transform: uppercase;
 }
 
-.cols2 {
-  display: flex;
-}
-.cols2 > div {
+.column {
   width: 50%;
   padding: 20px;
+}
+
+.booking {
+  padding: 100px 0 0;
+  background: url(images/bg_panel_stripe_blk_50.png) center center repeat;
+}
+
+.booking h2 {
+  color: #000;
+  padding-left: 15px;
+  padding-bottom: 25px;
+}
+
+.booking .contact {
+  padding: 15px;
+  background: #111;
+  color: #fff;
+  font-family: "robotolight", Arial, sans-serif;
+}
+
+.contact p {
+  max-width: 50%;
+}
+
+.booking form {
+  position: relative;
+}
+
+.bookingInput {
+  font-family: sans-serif;
+  font-size: 1.5em;
+  color: #5aa1b7;
+  padding: 1em;
+  margin: 20px;
+  font-weight: normal;
+  background: #1d1d1d;
+  border: 1px solid #000;
+  border-radius: 12px;
+}
+
+.booking input[type="submit"] {
+  margin-top: 30px;
 }

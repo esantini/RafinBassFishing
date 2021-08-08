@@ -94,14 +94,24 @@ H2 {
 }
 
 H3 {
-  color: #fff;
+  font-size: 1.7em;
+  line-height: 1.4em;
+  letter-spacing: 1px;
+  word-spacing: 0.1em;
+  color: #5aa1b7;
+  text-align: left;
   font-family: "bebasregular", Arial, sans-serif;
-  font-size: 3.3em;
   font-weight: 500;
+  text-transform: uppercase;
+}
+
+header H3 {
+  color: #fff;
+  font-size: 3.3em;
   line-height: 1em;
   margin: 2em 0 3em;
-  text-transform: uppercase;
   word-spacing: 0.2em;
+  text-align: center;
 }
 
 H5 {
@@ -154,4 +164,44 @@ H5 {
 
 dt {
   font-weight: 600;
+  margin-top: 25px;
+}
+dd {
+  margin-inline-start: 10px;
+}
+
+.display-flex {
+  display: flex;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  background: #aaa;
+  border: 0px;
+  color: #111;
+  font-family: "bebasregular", Arial, sans-serif;
+  font-size: 2em;
+  font-weight: 100;
+  letter-spacing: 1px;
+  line-height: 1em;
+  margin: 0px;
+  padding: 0.7em 0.5em 0.5em 0.5em;
+  text-align: right;
+  text-decoration: none;
+  word-spacing: 0.1em;
+
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -khtml-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
