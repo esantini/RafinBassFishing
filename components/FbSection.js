@@ -9,7 +9,7 @@ export default function FbSection() {
 
       <div>
         <a
-          href='https://www.facebook.com/groups/183114718702125/'
+          href='https://www.facebook.com/groups/rafinbassfishing/'
           className={styles.join_us}
           target='_blank'
           rel='noreferrer'
@@ -33,14 +33,14 @@ export default function FbSection() {
       <div
         alt="Facebook Group"
         className="fb-page"
-        data-href="https://www.facebook.com/Rafin-Bass-Fishing-Guides-at-El-Oviachic-1212256868807121/"
+        data-href="https://www.facebook.com/groups/rafinbassfishing/"
         data-tabs="timeline"
         data-small-header="false"
         data-adapt-container-width="true"
         data-hide-cover="false"
         data-show-facepile="true"
         style={{ clear: 'both' }}>
-        <blockquote cite="https://www.facebook.com/Rafin-Bass-Fishing-Guides-at-El-Oviachic-1212256868807121/" className="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Rafin-Bass-Fishing-Guides-at-El-Oviachic-1212256868807121/">Rafin Bass Fishing Guides at El Oviachic</a></blockquote>
+        <blockquote cite="https://www.facebook.com/groups/rafinbassfishing/" className="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/groups/rafinbassfishing/">Rafin Bass Fishing Guides at El Oviachic</a></blockquote>
       </div>
     </section>
   )

@@ -306,3 +306,18 @@ section.facebook {
 .booking input[type="submit"] {
   margin-top: 30px;
 }
+
+.booking h3 {
+  font-size: 1.8em;
+  color: #eee;
+}
+
+.bookingSelect > h5,
+.bookingSelect > div {
+  display: inline;
+}
+
+.booking .selectSubject > div,
+.booking .selectSubject > h5 {
+  display: inline;
+}

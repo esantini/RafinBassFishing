@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Image from 'next/image';
 import SelectDay from './SelectDay';
 import SelectMonth from './SelectMonth';
@@ -6,13 +7,17 @@ import SelectSubject from './SelectSubject';
 import styles from '../styles/Home.module.css';
 
 export default function Booking() {
+  const [subject, setSubject] = useState('booking');
   return (
     <section className={styles.booking} id='booking'>
       <h2>BOOKING</h2>
 
       <div className={styles.contact}>
 
-        <p>From everywhere in the world, please use this form to make your reservation or simply drop us a line and tell us what&apos;s on your mind. We&apos;ll make sure to get back to you as soon as possible.</p>
+        <p>
+          If you want to make a reservation or simply ask me a question feel free to use the form below
+          or contact me directly via email at <strong>raosga@hotmail.com</strong>
+        </p>
 
         <dl>
           <dt>Rafin Bass Fishing Guides at el Oviachic</dt>
@@ -22,25 +27,42 @@ export default function Booking() {
         </dl>
 
         <form action='handler' method='POST' name='booking' id='bookingform'>
+          <h3>Contact me:</h3>
           <div className="display-flex">
+
             <div style={{ width: '50%' }} className="flex-column">
-              <input disabled name="nombre" type="text" className={styles.bookingInput} id="nombre" size="50" placeholder='Your name' required />
-              <input disabled name="correo" type="text" className={styles.bookingInput} id="correo" size="50" placeholder='email' required />
-              <input disabled name="tel" type="text" className={styles.bookingInput} id="tel" size="50" placeholder='Tel' required />
-              <input disabled name="ciudad" type="text" className={styles.bookingInput} id="tel" size="50" placeholder='City' required />
-              <textarea disabled name="coms" cols="49" rows="3" className={styles.bookingInput} id="coms" placeholder='Your Comments'></textarea>
+
+              <SelectSubject setValue={setSubject} />
+
+              {subject === 'booking' && (
+                <div>
+                  <div className={styles.bookingSelect} >
+                    <h5>When</h5>
+                    <div>
+                      <SelectMonth />
+                      <SelectDay />
+                    </div>
+                  </div>
+
+                  <div className={styles.bookingSelect} >
+                    <h5>How Long?</h5>
+                    <div>
+                      <SelectDayCount />
+                    </div>
+                  </div>
+                </div>
+              )}
+
             </div>
 
             <div style={{ width: '50%' }}>
-              <h5> Making a Reservation? &nbsp;&nbsp;&nbsp;# Days:</h5>
 
-              <SelectMonth />
 
-              <SelectDay />
+              <input disabled name="nombre" type="text" className={styles.bookingInput} id="nombre" size="50" placeholder='Your name' required />
+              <input disabled name="correo" type="text" className={styles.bookingInput} id="correo" size="50" placeholder='email' required />
+              <input disabled name="tel" type="text" className={styles.bookingInput} id="tel" size="50" placeholder='Tel' required />
+              <textarea disabled name="coms" cols="49" rows="3" className={styles.bookingInput} id="coms" placeholder='Your Comments or Questions'></textarea>
 
-              <SelectDayCount />
-
-              <SelectSubject />
 
               <Image src='/construction.png' width='200px' height='100px' alt="In Construction" />
               <input disabled type='submit' name='submit' value='send' />
@@ -48,7 +70,7 @@ export default function Booking() {
 
           </div>
 
-          <div style={{ position: 'absolute', top: '20px' }}>
+          <div style={{ position: 'absolute', top: '20px', display: 'none' }}>
             <Image src='/construction.png' width='200px' height='100px' alt="In Construction" />
           </div>
 
