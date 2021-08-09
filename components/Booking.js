@@ -15,7 +15,7 @@ export default function Booking() {
       <div className={styles.contact}>
 
         <p>
-          If you want to make a reservation or simply ask me a question feel free to use the form below
+          If you want to make a reservation, ask me a question or simply check if a date is available feel free to <span style={{ textDecoration: "line-through" }}>use the form below</span> (under construction)
           or contact me directly via email at <strong>raosga@hotmail.com</strong>
         </p>
 
@@ -27,7 +27,7 @@ export default function Booking() {
         </dl>
 
         <form action='handler' method='POST' name='booking' id='bookingform'>
-          <h3>Contact me:</h3>
+          <h3 style={{ marginBottom: 0 }}>Contact me: </h3>
           <div className="display-flex">
 
             <div style={{ width: '50%' }} className="flex-column">
