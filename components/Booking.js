@@ -30,7 +30,7 @@ export default function Booking() {
           <h3 style={{ marginBottom: 0 }}>Contact me: </h3>
           <div className="display-flex">
 
-            <div style={{ width: '50%' }} className="flex-column">
+            <div className={styles.selectFields}>
 
               <SelectSubject setValue={setSubject} />
 
@@ -55,7 +55,7 @@ export default function Booking() {
 
             </div>
 
-            <div style={{ width: '50%' }}>
+            <div className={styles.textFields}>
 
 
               <input disabled name="nombre" type="text" className={styles.bookingInput} id="nombre" size="50" placeholder='Your name' required />
