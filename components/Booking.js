@@ -8,6 +8,27 @@ import styles from '../styles/Home.module.css';
 
 export default function Booking() {
   const [subject, setSubject] = useState('booking');
+
+  const submitBooking = async e => {
+    e.preventDefault();
+
+    const res = await fetch('/api/booking', {
+      body: JSON.stringify({
+        name: e.target.name.value,
+        email: e.target.email.value,
+        phone: e.target.phone.value,
+        comments: e.target.comments.value,
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      method: 'POST'
+    })
+
+    const result = await res.json()
+
+  }
+
   return (
     <section className={styles.booking} id='booking'>
       <h2>BOOKING</h2>
@@ -26,7 +47,7 @@ export default function Booking() {
           <dd><strong>Email:</strong> raosga@hotmail.com</dd>
         </dl>
 
-        <form action='handler' method='POST' name='booking' id='bookingform'>
+        <form onSubmit={submitBooking} method='POST' name='booking' id='bookingform'>
           <h3 style={{ marginBottom: 0 }}>Contact me: </h3>
           <div className={styles.formColumns}>
 
@@ -54,15 +75,14 @@ export default function Booking() {
 
             <div className={styles.textFields}>
 
-
-              <input disabled name="nombre" type="text" className={styles.bookingInput} id="nombre" placeholder='Your name' required />
-              <input disabled name="correo" type="text" className={styles.bookingInput} id="correo" placeholder='email' required />
-              <input disabled name="tel" type="text" className={styles.bookingInput} id="tel" placeholder='Tel' required />
-              <textarea disabled name="coms" className={styles.bookingInput} id="coms" placeholder='Your Comments or Questions' />
+              <input name="name" type="text" className={styles.bookingInput} id="name" placeholder='Your name' required />
+              <input name="email" type="text" className={styles.bookingInput} id="email" placeholder='E-Mail' required />
+              <input name="phone" type="text" className={styles.bookingInput} id="phone" placeholder='Phone' required />
+              <textarea name="comments" className={styles.bookingInput} id="comments" placeholder='Your Comments or Questions' />
 
               <div>
                 <Image src='/construction.png' width='200px' height='100px' alt="In Construction" />
-                <input disabled type='submit' name='submit' value='send' />
+                <input type='submit' name='submit' value='send' />
               </div>
             </div>
 
