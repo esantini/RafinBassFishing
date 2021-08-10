@@ -303,16 +303,24 @@ section.facebook {
   border-radius: 12px;
 }
 
+.bookingSelectContainer {
+  overflow: hidden;
+}
+
+.bookingSelectContainer > div {
+  transition: all 0.3s linear;
+}
+.bookingSelectContainer.hide > div {
+  margin-top: -100%;
+}
+
 .booking .selectFields {
   min-width: fit-content;
 }
 
 .textFields {
-  padding-left: 20px;
-  max-width: 50%;
-}
-
-.textFields .bookingInput {
+  display: flex;
+  flex-direction: column;
   width: -webkit-fill-available;
 }
 
@@ -340,6 +348,32 @@ section.facebook {
   margin: 0;
   padding: 0;
   overflow: auto;
+  display: flex;
+}
+
+.formColumns {
+  display: flex;
+}
+
+@media (max-width: 1100px) {
+  .selectSubject ul {
+    flex-direction: column;
+  }
+  .contact p {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 950px) {
+  .formColumns {
+    flex-direction: column;
+  }
+  .selectSubject ul {
+    flex-direction: row;
+  }
+  .contact p {
+    max-width: 75%;
+  }
 }
 
 .selectSubject ul li {
