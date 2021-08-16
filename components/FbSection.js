@@ -30,18 +30,6 @@ export default function FbSection() {
         data-share="true"
         style={{ display: "none" }}
       />
-      <div
-        alt="Facebook Group"
-        className="fb-page"
-        data-href="https://www.facebook.com/groups/rafinbassfishing/"
-        data-tabs="timeline"
-        data-small-header="false"
-        data-adapt-container-width="true"
-        data-hide-cover="false"
-        data-show-facepile="true"
-        style={{ clear: 'both' }}>
-        <blockquote cite="https://www.facebook.com/groups/rafinbassfishing/" className="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/groups/rafinbassfishing/">Rafin Bass Fishing Guides at El Oviachic</a></blockquote>
-      </div>
     </section>
   )
 }

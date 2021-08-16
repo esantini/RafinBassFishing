@@ -12,21 +12,21 @@ export default function Booking() {
   const submitBooking = async e => {
     e.preventDefault();
 
+    const formBody = {
+      name: e.target.name.value,
+      subject: e.target.subject.value,
+      email: e.target.email.value,
+      phone: e.target.phone.value,
+      comments: e.target.comments.value,
+    };
+
     const res = await fetch('/api/booking', {
-      body: JSON.stringify({
-        name: e.target.name.value,
-        email: e.target.email.value,
-        phone: e.target.phone.value,
-        comments: e.target.comments.value,
-      }),
+      body: JSON.stringify(formBody),
       headers: {
         'Content-Type': 'application/json'
       },
       method: 'POST'
-    })
-
-    const result = await res.json()
-
+    });
   }
 
   return (
@@ -54,7 +54,7 @@ export default function Booking() {
             <div className={styles.selectFields}>
 
               <SelectSubject setValue={setSubject} />
-              <div className={`${styles.bookingSelectContainer} ${subject === 'booking' ? '' : styles.hide}`} >
+              <div className={`${styles.bookingSelectContainer} ${subject === 'Booking' ? '' : styles.hide}`} >
                 <div className={styles.bookingSelect} >
                   <h5>When</h5>
                   <div>

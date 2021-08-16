@@ -1,6 +1,4 @@
-import { useEffect } from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
 import NavBar from '../components/NavBar';
 import FbSection from '../components/FbSection';
 import AboutUs from '../components/AboutUs';
@@ -10,18 +8,7 @@ import Faq from '../components/Faq';
 import Booking from '../components/Booking';
 import styles from '../styles/Home.module.css';
 
-const prod = true; // TODO env === prod
-
 export default function Home() {
-  useEffect(() => {
-    if (typeof document === 'undefined' || !prod) return;
-    let d = document, s = 'script', id = 'facebook-jssdk';
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.7&appId=665461240289816";
-    fjs.parentNode.insertBefore(js, fjs);
-  }, []);
   return (
     <div className={styles.container}>
       <Head>
@@ -49,7 +36,7 @@ export default function Home() {
 
         <AboutUs />
 
-        <Location prod={prod} />
+        <Location />
 
         <Gallery />
 
