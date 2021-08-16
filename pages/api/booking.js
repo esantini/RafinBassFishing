@@ -21,7 +21,7 @@ const getTemplate = ({ name, phone, email, message, subject, when, days }) => `
     : ''}
   <br />
   <strong>Message:</strong>
-  <p>${message}</p>
+  <p>${message.replace(/(?:\r\n|\r|\n)/g, '<br />')}</p>
   <br />
   <img class="logo" src="https://rafinbassfishing.com.mx/l_rafin_bk.png" />
 </div>

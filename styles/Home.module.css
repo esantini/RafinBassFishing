@@ -246,6 +246,17 @@ section.facebook {
   word-spacing: 1px;
 }
 
+.gallery .images {
+  padding: 20px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery .imageWrap {
+  margin: 5px;
+}
+
 .faq {
   background: #414141 url(/bg_faq.jpg) center center repeat;
   color: #fff;

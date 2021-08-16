@@ -8,6 +8,7 @@ import styles from '../styles/Home.module.css';
 
 export default function Booking() {
   const [subject, setSubject] = useState('Booking');
+  const isBooking = subject === 'Booking';
 
   const submitBooking = async e => {
     e.preventDefault();
@@ -22,7 +23,7 @@ export default function Booking() {
       message: e.target.message.value,
     };
 
-    if (subject === 'Booking') {
+    if (isBooking) {
       formBody.when = `${e.target.month.value} ${e.target.day.value}`;
       formBody.days = e.target.days.value;
     }
@@ -61,12 +62,12 @@ export default function Booking() {
             <div className={styles.selectFields}>
 
               <SelectSubject setValue={setSubject} />
-              <div className={`${styles.bookingSelectContainer} ${subject === 'Booking' ? '' : styles.hide}`} >
+              <div className={`${styles.bookingSelectContainer} ${isBooking ? '' : styles.hide}`} >
                 <div className={styles.bookingSelect} >
                   <h5>When</h5>
                   <div>
-                    <SelectMonth />
-                    <SelectDay />
+                    <SelectMonth required={isBooking} />
+                    <SelectDay required={isBooking} />
                   </div>
                 </div>
 
@@ -84,12 +85,12 @@ export default function Booking() {
 
               <input name="name" type="text" className={styles.bookingInput} id="name" placeholder='Your name' required />
               <input name="email" type="text" className={styles.bookingInput} id="email" placeholder='E-Mail' required />
-              <input name="phone" type="text" className={styles.bookingInput} id="phone" placeholder='Phone' required />
-              <textarea name="message" className={styles.bookingInput} id="message" placeholder='Your Comments or Questions' />
+              <input name="phone" type="text" className={styles.bookingInput} id="phone" placeholder='Phone' />
+              <textarea name="message" className={styles.bookingInput} id="message" placeholder='Your Comments or Questions' required={subject === "Message"} />
 
               <div>
                 <Image src='/construction.png' width='200px' height='100px' alt="In Construction" />
-                <input type='submit' name='submit' value='send' />
+                <input type='submit' name='submit' value='send' className="active" />
               </div>
             </div>
 
