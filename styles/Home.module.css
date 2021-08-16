@@ -19,12 +19,12 @@
 
 .topPanel {
   padding-top: 90px;
-  background: url(images/bg_panel_stripe_blk_50.png) center center repeat;
+  background: url(/bg_panel_stripe_blk_50.png) center center repeat;
   text-align: center;
 }
 
 section.facebook {
-  background: url(images/bg_panel_grey50.png) center center repeat;
+  background: url(/bg_panel_grey50.png) center center repeat;
 }
 
 .facebook h2 {
@@ -136,7 +136,7 @@ section.facebook {
   bottom: 0;
   left: 0;
   right: 0;
-  background: url(images/l_rafin_bk.png) no-repeat bottom right;
+  background: url(/l_rafin_bk.png) no-repeat bottom right;
   background-size: contain;
   z-index: 1;
 }
@@ -247,7 +247,7 @@ section.facebook {
 }
 
 .faq {
-  background: #414141 url(images/bg_faq.jpg) center center repeat;
+  background: #414141 url(/bg_faq.jpg) center center repeat;
   color: #fff;
   font-family: "robotolight", Arial, sans-serif;
 }
@@ -267,7 +267,7 @@ section.facebook {
 
 .booking {
   padding: 100px 0 0;
-  background: url(images/bg_panel_stripe_blk_50.png) center center repeat;
+  background: url(/bg_panel_stripe_blk_50.png) center center repeat;
 }
 
 .booking h2 {

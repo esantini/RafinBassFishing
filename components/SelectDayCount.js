@@ -2,18 +2,18 @@ import styles from '../styles/Home.module.css';
 
 export default function SelectDayCount() {
   return (
-    <select name="xtradays" id="xtradays" className={styles.bookingInput}>
+    <select name="days" id="days" className={styles.bookingInput} defaultValue={3}>
 
-      <option value="01">1 day</option>
-      <option value="02">2 days</option>
-      <option value="03">3 days</option>
-      <option value="04">4 days</option>
-      <option value="05">5 days</option>
-      <option value="06">6 days</option>
-      <option value="07">7 days</option>
-      <option value="08">8 days</option>
-      <option value="09">9 days</option>
-      <option value="10">10 days</option>
+      <option value={1}>1 day</option>
+      <option value={2}>2 days</option>
+      <option value={3}>3 days</option>
+      <option value={4}>4 days</option>
+      <option value={5}>5 days</option>
+      <option value={6}>6 days</option>
+      <option value={7}>7 days</option>
+      <option value={8}>8 days</option>
+      <option value={9}>9 days</option>
+      <option value={10}>10 days</option>
 
     </select>
   )

@@ -12,15 +12,22 @@ export default function Booking() {
   const submitBooking = async e => {
     e.preventDefault();
 
+    const subject = e.target.subject.value;
+
     const formBody = {
       name: e.target.name.value,
-      subject: e.target.subject.value,
+      subject,
       email: e.target.email.value,
       phone: e.target.phone.value,
       message: e.target.message.value,
     };
 
-    const res = await fetch('/api/booking', {
+    if (subject === 'Booking') {
+      formBody.when = `${e.target.month.value} ${e.target.day.value}`;
+      formBody.days = e.target.days.value;
+    }
+
+    await fetch('/api/booking', {
       body: JSON.stringify(formBody),
       headers: {
         'Content-Type': 'application/json'

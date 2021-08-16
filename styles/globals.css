@@ -46,7 +46,7 @@ robotoitalic  robotolight roboto_condensedlight  roboto_condensedlight_italic  r
 
 body {
   margin: 0 auto;
-  background: url("images/bg.jpg") no-repeat center center fixed;
+  background: url(/bg.jpg) no-repeat center center fixed;
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
