@@ -354,6 +354,47 @@ section.facebook {
   display: inline;
 }
 
+.booking form {
+  position: relative;
+  overflow: hidden;
+}
+
+.booking .formContent {
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+
+.booking .sent .formContent {
+  margin-left: 100vw;
+}
+.booking .sentMessage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-left: -100vw;
+  max-width: 90vw;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+.booking .sent .sentMessage {
+  margin-left: 0;
+}
+
+.booking .sending {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #00000077;
+  z-index: 2;
+}
+
+.booking .sending h3 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .selectSubject ul {
   list-style: none;
   margin: 0;
@@ -394,6 +435,7 @@ section.facebook {
   float: left;
   width: auto;
   height: 100px;
+  z-index: 1;
 }
 
 .selectSubject ul li input[type="radio"] {

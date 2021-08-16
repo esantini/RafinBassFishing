@@ -32,7 +32,7 @@ const getMessage = async (msgProps) => {
 
   return {
     from: 'Rafin Bass Fishing <no-reply@rafinbassfishing.com.mx>',
-    to: process.env.NEXT_PUBLIC_DEV ? 'esantinie@gmail.com' : 'esantinie@gmail.com',
+    to: process.env.NEXT_PUBLIC_DEV ? 'esantinie@gmail.com' : 'esantinie@gmail.com, raosga@hotmail.com',
     subject: `${msgProps.subject}: ${msgProps.name}`,
     html,
   };
