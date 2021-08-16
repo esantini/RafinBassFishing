@@ -8,9 +8,6 @@ import Faq from '../components/Faq';
 import Booking from '../components/Booking';
 import styles from '../styles/Home.module.css';
 
-const isDev = process.env.NEXT_PUBLIC_DEV;
-const baseUrl = isDev ? 'http://localhost:3000' : 'https://rafinbassfishing.com.mx';
-
 function Home({ images }) {
   return (
     <div className={styles.container}>
@@ -54,11 +51,14 @@ function Home({ images }) {
   )
 }
 
+import fs from 'fs';
+import path from 'path';
 // This function gets called at build time
 export async function getStaticProps() {
-  // Call an external API endpoint to get posts
-  const res = await fetch(`${baseUrl}/api/images`);
-  const { images } = await res.json();
+  const imagesDir = 'gallery_images';
+  const dir = path.resolve('./public', imagesDir);
+  const images = fs.readdirSync(dir);
+  images.splice(42);
 
   // By returning { props: { images } }, the component
   // will receive `images` as a prop at build time

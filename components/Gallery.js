@@ -13,7 +13,7 @@ export default function Gallery({ images }) {
 
         {images && images.map(img => (
           <div className={styles.imageWrap} key={img}>
-            <Image src={`/gallery_images/t/${img}`} width="200px" height="200px" />
+            <Image src={`/gallery_images/t/${img}`} width="200px" height="200px" alt="Fishing Bass with Rafin" />
           </div>
         ))}
       </div>
