@@ -37,6 +37,7 @@ const sendMail = async props => {
 
   await mailgun.messages().send(message, (error, body) => {
     if (error) throw error;
+    console.log({ body });
     Promise.resolve();
   });
 }
