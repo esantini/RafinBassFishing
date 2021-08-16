@@ -55,7 +55,7 @@ import fs from 'fs';
 import path from 'path';
 // This function gets called at build time
 export async function getStaticProps() {
-  const imagesDir = 'gallery_images';
+  const imagesDir = 'thumbnails';
   const dir = path.resolve('./public', imagesDir);
   const images = fs.readdirSync(dir);
   images.splice(42);
