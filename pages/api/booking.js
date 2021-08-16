@@ -4,18 +4,18 @@ const mailgun = require('mailgun-js')({
   apiKey: process.env.MAILGUN_KEY,
 });
 
-const getTemplate = ({ name, phone, email, text, subject }) => `
+const getTemplate = ({ name, phone, email, message, subject }) => `
 <div>
   <style>
     h2 { color: #256cb2; }
     img.logo { width: 120px }
   </style>
   Hola Rafin! <br />
-  <strong>From:</strong> ${name} <br />
+  <strong>${subject} from:</strong> ${name} <br />
   ${phone ? `<strong>Phone:</strong> ${phone} <br />` : ''}
   ${email ? `<strong>Email:</strong> ${email} <br />` : ''}
   <strong>Message:</strong> <br />
-  ${text}
+  ${message}
   <br />
   <img class="logo" src="https://rafinbassfishing.com.mx/l_rbfgao_wh90.png" />
 </div>
@@ -35,10 +35,8 @@ const getMessage = async (msgProps) => {
 const sendMail = async props => {
   const message = await getMessage(props);
 
-  await mailgun.messages().send(message, (error, body) => {
-    if (error) throw error;
-    console.log({ body });
-    Promise.resolve();
+  return new Promise((resolve, reject) => {
+    mailgun.messages().send(message, (err, body) => err ? reject(err) : resolve(body));
   });
 }
 
@@ -46,10 +44,10 @@ export default function handler(req, res) {
   if (req.method !== 'POST') {
     res.status(400).json({ msg: `invalid booking method: ${req.method}` });
   } else {
-    console.log('sending mail');
-    return sendMail(req.body).then(() => {
-      console.log('Mail Sent');
-      res.status(200).json({ status: 'OK', msg: 'Mail sent' });
-    });
+    return sendMail(req.body).then(body => {
+      console.log(`Mail Sent: ${body.id}`);
+      res.status(200).json({ status: 'OK', msg: `Mail sent: ${body.id}` });
+    })
+      .catch(e => { throw e });
   }
 }

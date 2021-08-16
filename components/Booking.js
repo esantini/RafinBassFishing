@@ -7,7 +7,7 @@ import SelectSubject from './SelectSubject';
 import styles from '../styles/Home.module.css';
 
 export default function Booking() {
-  const [subject, setSubject] = useState('booking');
+  const [subject, setSubject] = useState('Booking');
 
   const submitBooking = async e => {
     e.preventDefault();
@@ -17,7 +17,7 @@ export default function Booking() {
       subject: e.target.subject.value,
       email: e.target.email.value,
       phone: e.target.phone.value,
-      comments: e.target.comments.value,
+      message: e.target.message.value,
     };
 
     const res = await fetch('/api/booking', {
@@ -78,7 +78,7 @@ export default function Booking() {
               <input name="name" type="text" className={styles.bookingInput} id="name" placeholder='Your name' required />
               <input name="email" type="text" className={styles.bookingInput} id="email" placeholder='E-Mail' required />
               <input name="phone" type="text" className={styles.bookingInput} id="phone" placeholder='Phone' required />
-              <textarea name="comments" className={styles.bookingInput} id="comments" placeholder='Your Comments or Questions' />
+              <textarea name="message" className={styles.bookingInput} id="message" placeholder='Your Comments or Questions' />
 
               <div>
                 <Image src='/construction.png' width='200px' height='100px' alt="In Construction" />
