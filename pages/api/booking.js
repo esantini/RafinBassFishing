@@ -17,7 +17,7 @@ const getTemplate = ({ name, phone, email, message, subject, when, days }) => `
   ${email ? `<strong>Email:</strong> ${email} <br />` : ''}
   ${subject === "Booking" ? `
     <strong>When?</strong> ${when} <br />
-    <strong>How Long?</strong> ${days} <br />`
+    <strong>How Long?</strong> ${days} day(s) <br />`
     : ''}
   <br />
   <strong>Message:</strong>

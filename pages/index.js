@@ -51,20 +51,15 @@ function Home({ images }) {
   )
 }
 
-import fs from 'fs';
-import path from 'path';
+import imagesData from '../imagesData.json';
 // This function gets called at build time
 export async function getStaticProps() {
-  const imagesDir = 'thumbnails';
-  const dir = path.resolve('./public', imagesDir);
-  const images = fs.readdirSync(dir);
-  images.splice(42);
 
   // By returning { props: { images } }, the component
   // will receive `images` as a prop at build time
   return {
     props: {
-      images,
+      images: imagesData,
     },
   }
 }

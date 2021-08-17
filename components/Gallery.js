@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import GridGallery from 'react-photo-gallery';
 import styles from '../styles/Home.module.css';
 
 export default function Gallery({ images }) {
@@ -10,12 +11,7 @@ export default function Gallery({ images }) {
         <Image src='/construction.png' width='200px' height='100px' alt="In Construction" />
       </div>
       <div className={styles.images}>
-
-        {images && images.map(img => (
-          <div className={styles.imageWrap} key={img}>
-            <Image src={`/thumbnails/${img}`} width="200px" height="200px" alt="Fishing Bass with Rafin" />
-          </div>
-        ))}
+        <GridGallery photos={images} />
       </div>
     </section>
   );
