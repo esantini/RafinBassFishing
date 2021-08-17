@@ -10,7 +10,6 @@ const images = imageNames.map(imgName => {
   const dimensions = sizeOf(`${dir}\\${imgName}`);
   return {
     src: `/gallery_images/${imgName}`,
-    thumbnail: `/thumbnails/${imgName}`,
     width: dimensions.width,
     height: dimensions.height,
   }

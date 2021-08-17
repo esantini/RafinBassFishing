@@ -13,7 +13,7 @@ export default function NavBar() {
         />
       </a>
       <ul className="nav_list">
-        <li><a target="_top" href="#home">HOME</a></li>
+        <li><a target="_top" href="#">HOME</a></li>
         <li><a target="_self" href="#about_us">ABOUT US</a></li>
         <li><a target="_self" href="#location">LOCATION</a></li>
         <li><a target="_self" href="#gallery">GALLERY</a></li>

@@ -1,3 +1,7 @@
+import React from 'react';
+// Warning: useLayoutEffect does nothing on the server
+React.useLayoutEffect = React.useEffect;
+
 import Head from 'next/head';
 import NavBar from '../components/NavBar';
 import FbSection from '../components/FbSection';
@@ -29,6 +33,7 @@ function Home({ images }) {
             <h1>Rafin Bass Fishing Guides At El Oviachic</h1>
             <p>is a friends trip kind, based on in-town food, great fishing days and having a great time.</p>
             <h3>COME AND LIVE IT!</h3>
+            <h3 className="amigo-style">Amigo Style!</h3>
           </header>
 
           <FbSection />
@@ -54,6 +59,7 @@ function Home({ images }) {
 import imagesData from '../imagesData.json';
 // This function gets called at build time
 export async function getStaticProps() {
+  imagesData.splice(30);
 
   // By returning { props: { images } }, the component
   // will receive `images` as a prop at build time

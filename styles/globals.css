@@ -109,9 +109,15 @@ header H3 {
   color: #fff;
   font-size: 3.3em;
   line-height: 1em;
-  margin: 2em 0 3em;
+  margin-top: 2em;
   word-spacing: 0.2em;
   text-align: center;
+}
+
+header H3.amigo-style {
+  font-size: 2.5em;
+  margin-top: 0;
+  color: #ffc47c;
 }
 
 H5 {
@@ -217,4 +223,98 @@ input[type="button"].active:hover,
 input[type="submit"].active:hover,
 input[type="reset"].active:hover {
   background-color: #5aa1b7;
+}
+
+#carousel {
+  background: #000000e8;
+  color: white;
+  overflow: hidden;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.embla {
+  position: relative;
+  padding: 20px;
+  max-width: 670px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__viewport.is-draggable {
+  cursor: move;
+  cursor: grab;
+}
+
+.embla__viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.embla__container {
+  display: flex;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  margin-left: -10px;
+}
+
+.embla__slide {
+  padding-left: 10px;
+  min-width: 100%;
+  position: relative;
+}
+
+.embla__slide__inner {
+  position: relative;
+  overflow: hidden;
+  height: 70vh;
+}
+
+.embla--thumb {
+  padding-top: 0;
+  margin-top: -12px;
+}
+
+.embla__container--thumb {
+  cursor: default;
+  margin-left: -8px;
+}
+
+.embla__slide--thumb {
+  padding-left: 8px;
+  min-width: 20%;
+}
+
+.embla__slide__inner--thumb {
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  height: 100px;
+  width: 100%;
+  background-color: transparent;
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.embla__slide__thumbnail {
+  opacity: 0.2;
+  transition: opacity 0.2s;
+}
+
+.embla__slide--thumb.is-selected .embla__slide__thumbnail {
+  opacity: 1;
 }
