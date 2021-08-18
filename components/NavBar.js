@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function NavBar() {
   return (
     <nav className="nav">
-      <a href="index.php" target="_self">
+      <a target="_self">
         <Image
           src="/l_rbfgao_wh90.png"
           height="90px"

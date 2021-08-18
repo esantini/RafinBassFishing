@@ -3,41 +3,26 @@ import { useEmblaCarousel } from "embla-carousel/react";
 import Image from 'next/image';
 import { Thumb } from "./EmblaCarouselThumb";
 
-export default function Carousel({ images, selected = 0, setSelected }) {
-  const [mainViewportRef, embla] = useEmblaCarousel({ skipSnaps: false, startIndex: selected });
+const Carousel = ({ images, startIndex = 0 }) => {
+  const [selectedIndex, setSelectedIndex] = useState(startIndex);
+  const [mainViewportRef, embla] = useEmblaCarousel({ skipSnaps: false, startIndex });
   const [thumbViewportRef, emblaThumbs] = useEmblaCarousel({
     containScroll: "keepSnaps",
     selectedClass: "",
     dragFree: true,
+    startIndex,
   });
 
-  const scrollN = n => {
-    setSelected(i => i + n);
-    if (embla) {
-      embla.scrollTo(selected + n);
-    }
-  }
-
-  const scrollNext = () => {
-    setSelected(i => {
-      return i + 1;
-    });
-    if (embla) {
-      // embla.scrollTo(i + 1);
-      embla.scrollNext();
-    }
-  }
-
   const keyEvent = useCallback(({ key }) => {
-    if (key === "ArrowRight") scrollNext();
-    else if (key === "ArrowLeft") scrollN(-1);
-  }, []);
+    if (key === "ArrowRight") embla.scrollNext();
+    else if (key === "ArrowLeft") embla.scrollPrev();
+  }, [embla]);
 
   useEffect(() => {
     window.addEventListener("keydown", keyEvent);
     return () => {
       window.removeEventListener("keydown", keyEvent);
-    }
+    };
   }, [keyEvent]);
 
   const onThumbClick = useCallback(
@@ -50,13 +35,12 @@ export default function Carousel({ images, selected = 0, setSelected }) {
 
   const onSelect = useCallback(() => {
     if (!embla || !emblaThumbs) return;
-    setSelected(embla.selectedScrollSnap());
+    setSelectedIndex(embla.selectedScrollSnap());
     emblaThumbs.scrollTo(embla.selectedScrollSnap());
-  }, [embla, emblaThumbs, setSelected]);
+  }, [embla, emblaThumbs, setSelectedIndex]);
 
   useEffect(() => {
     if (!embla) return;
-    onSelect();
     embla.on("select", onSelect);
   }, [embla, onSelect]);
 
@@ -65,8 +49,8 @@ export default function Carousel({ images, selected = 0, setSelected }) {
       <div className="embla embla--main">
         <div className="embla__viewport" ref={mainViewportRef}>
           <div className="embla__container">
-            {images.map((img) => (
-              <div className="embla__slide" key={img.src}>
+            {images.map((img, index) => (
+              <div className="embla__slide" key={index}>
                 <div className="embla__slide__inner">
                   <Image
                     className="embla__slide__img"
@@ -85,12 +69,12 @@ export default function Carousel({ images, selected = 0, setSelected }) {
       <div className="embla embla--thumb">
         <div className="embla__viewport" ref={thumbViewportRef}>
           <div className="embla__container embla__container--thumb">
-            {images.map((img, i) => (
+            {images.map((img, index) => (
               <Thumb
-                onClick={() => onThumbClick(i)}
-                selected={i === selected}
-                image={img}
-                key={img.src}
+                onClick={() => onThumbClick(index)}
+                selected={index === selectedIndex}
+                imgSrc={img.src}
+                key={index}
               />
             ))}
           </div>
@@ -99,3 +83,5 @@ export default function Carousel({ images, selected = 0, setSelected }) {
     </div>
   );
 };
+
+export default Carousel;

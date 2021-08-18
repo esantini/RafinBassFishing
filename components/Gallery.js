@@ -1,6 +1,5 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 
-import Image from 'next/image';
 import GridGallery from 'react-photo-gallery';
 import Carousel from './Carousel';
 import styles from '../styles/Home.module.css';
@@ -12,6 +11,7 @@ export default function Gallery({ images }) {
   const closeCarousel = useCallback(() => {
     setCurrentImage(0);
     setViewerIsOpen(false);
+    revivalBack()
   }, []);
 
   const keyEvent = useCallback(({ key, target }) => {
@@ -30,7 +30,21 @@ export default function Gallery({ images }) {
   const openCarousel = useCallback((event, { photo, index }) => {
     setCurrentImage(index);
     setViewerIsOpen(true);
+    neutralizeBack(closeCarousel);
   }, []);
+
+  const neutralizeBack = (callback) => {
+    window.history.pushState(null, "", window.location.href);
+    window.onpopstate = () => {
+      window.history.pushState(null, "", window.location.href);
+      callback();
+    };
+  };
+
+  const revivalBack = () => {
+    window.onpopstate = undefined;
+    window.history.back();
+  };
 
   return (
     <section className={styles.gallery} id='gallery'>
@@ -42,7 +56,7 @@ export default function Gallery({ images }) {
       <div className={styles.images}>
         <GridGallery photos={images} onClick={openCarousel} />
       </div>
-      {viewerIsOpen && <Carousel images={images} selected={currentImage} setSelected={setCurrentImage} />}
+      {viewerIsOpen && <Carousel images={images} startIndex={currentImage} />}
     </section>
   );
 }
