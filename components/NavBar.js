@@ -3,15 +3,13 @@ import Image from 'next/image';
 export default function NavBar() {
   return (
     <nav className="nav">
-      <a target="_self">
-        <Image
-          src="/l_rbfgao_wh90.png"
-          height="90px"
-          width="93px"
-          border="0"
-          alt="Rafin Bass Fishing Logo"
-        />
-      </a>
+      <Image
+        src="/l_rbfgao_wh90.png"
+        height="90px"
+        width="93px"
+        border="0"
+        alt="Rafin Bass Fishing Logo"
+      />
       <ul className="nav_list">
         <li><a target="_top" href="#">HOME</a></li>
         <li><a target="_self" href="#about_us">ABOUT US</a></li>

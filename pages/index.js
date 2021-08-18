@@ -18,7 +18,7 @@ function Home({ images }) {
       <Head>
         <title>RAFIN BASS FISHING GUIDES</title>
         <meta name="description" content="COME AND LIVE IT" />
-        <meta name="viewport" />
+        <meta name="viewport" content="width=device-width, initial-scale=0.6" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="Description" content="Rafin Bass Fishing Guides At El Oviachic is a friends trip kind, based on in-town food, great fishing days and having a great time." />
         <meta name="Keywords" content="bass, fishing, oviachic, rafin, Guides, Bass fishing guides, Oviachic lake, Fishing in mexico, Black bass, Large mouth bass, Presa el oviachic, Lobina, Lobina negra, Pesca deportiva, fishing guides, come and live it, obregon, sonora, mexico" />
