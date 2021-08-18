@@ -17,7 +17,14 @@ function Home({ images }) {
   return (
     <div className={styles.container}>
       <div className="main-bg">
-        <Image src="/bg.jpg" layout="fill" className="main-bg" objectFit="cover" objectPosition="top" />
+        <Image
+          src="/bg.jpg"
+          layout="fill"
+          className="main-bg"
+          objectFit="cover"
+          objectPosition="top"
+          alt="Rafin Bass Fishing Background"
+        />
       </div>
       <Head>
         <title>RAFIN BASS FISHING GUIDES</title>
