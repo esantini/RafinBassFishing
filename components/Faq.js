@@ -34,8 +34,8 @@ export default function Faq() {
             </dd>
 
             <dt> 3.- THE EXTREME PACKAGE</dt>
-            <p>(BUDGET FRIENDLY PACKAGE) </p>
             <dd>
+              <p>(BUDGET FRIENDLY PACKAGE) </p>
               <p>One or two persons... 3rd person extra in the boat</p>
               <p>Will sound crazy but doable. This package is for anglers that want to come for revenge of getting blanked or just want to come and fish for the weekend with us and get a lot of fish having a great time.</p>
               <p>This packcage includes two days at El Oviachic lake all inclusive. Let us take you to the best fishing spots and the best taco stands in the city, so you just relax and have a blast.</p>

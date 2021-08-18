@@ -32,7 +32,7 @@ function Home({ images }) {
           <header>
             <h1>Rafin Bass Fishing Guides At El Oviachic</h1>
             <p>is a friends trip kind, based on in-town food, great fishing days and having a great time.</p>
-            <h3>COME AND LIVE IT!</h3>
+            <h2>COME AND LIVE IT!</h2>
             <h3 className="amigo-style">Amigo Style!</h3>
           </header>
 

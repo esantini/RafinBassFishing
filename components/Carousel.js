@@ -55,7 +55,7 @@ const Carousel = ({ images, startIndex = 0 }) => {
                   <Image
                     className="embla__slide__img"
                     src={img.src}
-                    alt="Fishing bass at Oviachic with Rafin"
+                    alt="Fishing bass at Lake Oviachic with Rafin, Amigo Style!"
                     layout="fill"
                     objectFit="contain"
                   />

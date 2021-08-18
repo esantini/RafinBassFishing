@@ -1,22 +1,3 @@
-.container {
-  /* min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; */
-}
-
-.main {
-  /* padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-}
-
 .topPanel {
   padding-top: 90px;
   background: url(/bg_panel_stripe_blk_50.png) center center repeat;
@@ -344,13 +325,22 @@ section.facebook {
   color: #eee;
 }
 
-.bookingSelect > h5,
+.bookingSelect > h4,
 .bookingSelect > div {
   display: inline;
+  color: #5aa1b7;
+}
+
+.bookingSelect > h4 {
+  font-family: "bebasregular", Arial, sans-serif;
+  font-size: 1.7em;
+  letter-spacing: 1px;
+  word-spacing: 0.1em;
+  font-weight: 100;
 }
 
 .booking .selectSubject > div,
-.booking .selectSubject > h5 {
+.booking .selectSubject > h4 {
   display: inline;
 }
 

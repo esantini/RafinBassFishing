@@ -105,6 +105,10 @@ H3 {
   text-transform: uppercase;
 }
 
+header H2 {
+  margin: 1em 0;
+}
+
 header H3 {
   color: #fff;
   font-size: 3.3em;

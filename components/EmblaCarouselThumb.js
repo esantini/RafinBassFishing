@@ -11,7 +11,7 @@ export const Thumb = ({ selected, onClick, imgSrc }) => (
       className="embla__slide__inner embla__slide__inner--thumb"
       type="button"
     >
-      <Image className="embla__slide__thumbnail" objectFit="cover" layout="fill" src={imgSrc} alt="Fishing Bass at Oviachic with Rafin" />
+      <Image className="embla__slide__thumbnail" objectFit="cover" layout="fill" src={imgSrc} alt="Fishing bass at Lake Oviachic with Rafin, Amigo Style!" />
     </button>
   </div>
 );

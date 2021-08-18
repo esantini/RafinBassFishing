@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Image from 'next/image';
 import SelectDay from './SelectDay';
 import SelectMonth from './SelectMonth';
 import SelectDayCount from './SelectDayCount';
@@ -80,7 +79,7 @@ export default function Booking() {
                 <SelectSubject setValue={setSubject} />
                 <div className={`${styles.bookingSelectContainer} ${isBooking ? '' : styles.hide}`} >
                   <div className={styles.bookingSelect} >
-                    <h5>When</h5>
+                    <h4>When</h4>
                     <div>
                       <SelectMonth required={isBooking} />
                       <SelectDay required={isBooking} />
@@ -88,7 +87,7 @@ export default function Booking() {
                   </div>
 
                   <div className={styles.bookingSelect} >
-                    <h5>How Long?</h5>
+                    <h4>How Long?</h4>
                     <div>
                       <SelectDayCount />
                     </div>

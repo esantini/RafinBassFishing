@@ -16,7 +16,7 @@ export default function Gallery({ images }) {
 
   const keyEvent = useCallback(({ key, target }) => {
     if (key === "Escape" || target.id === 'carousel') closeCarousel();
-  }, []);
+  }, [closeCarousel]);
 
   useEffect(() => {
     window.addEventListener("keydown", keyEvent);
@@ -31,7 +31,7 @@ export default function Gallery({ images }) {
     setCurrentImage(index);
     setViewerIsOpen(true);
     neutralizeBack(closeCarousel);
-  }, []);
+  }, [closeCarousel]);
 
   const neutralizeBack = (callback) => {
     window.history.pushState(null, "", window.location.href);
@@ -50,9 +50,6 @@ export default function Gallery({ images }) {
     <section className={styles.gallery} id='gallery'>
       <h2>GALLERY</h2>
       <p>Click on image to zoom-in. Enjoy!</p>
-      {/* <div style={{ position: 'absolute', top: '100px' }}>
-        <Image src='/construction.png' width='200px' height='100px' alt="In Construction" />
-      </div> */}
       <div className={styles.images}>
         <GridGallery photos={images} onClick={openCarousel} />
       </div>
