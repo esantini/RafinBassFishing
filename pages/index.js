@@ -3,6 +3,7 @@ import React from 'react';
 React.useLayoutEffect = React.useEffect;
 
 import Head from 'next/head';
+import Image from 'next/image';
 import NavBar from '../components/NavBar';
 import FbSection from '../components/FbSection';
 import AboutUs from '../components/AboutUs';
@@ -15,6 +16,9 @@ import styles from '../styles/Home.module.css';
 function Home({ images }) {
   return (
     <div className={styles.container}>
+      <div className="main-bg">
+        <Image src="/bg.jpg" layout="fill" className="main-bg" objectFit="cover" objectPosition="top" />
+      </div>
       <Head>
         <title>RAFIN BASS FISHING GUIDES</title>
         <meta name="description" content="COME AND LIVE IT" />
