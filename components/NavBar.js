@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Menu from './Menu';
 
 export default function NavBar() {
   return (
@@ -10,14 +11,8 @@ export default function NavBar() {
         border="0"
         alt="Rafin Bass Fishing Logo"
       />
-      <ul className="nav_list">
-        <li><a target="_top" href="#">HOME</a></li>
-        <li><a target="_self" href="#about_us">ABOUT US</a></li>
-        <li><a target="_self" href="#location">LOCATION</a></li>
-        <li><a target="_self" href="#gallery">GALLERY</a></li>
-        <li><a target="_self" href="#faq">F.A.Q.</a></li>
-        <li><a target="_self" href="#booking">BOOKING &amp; CONTACT INFO</a></li>
-      </ul>
+
+      <Menu />
     </nav>
   )
 };

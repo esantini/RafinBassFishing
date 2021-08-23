@@ -15,7 +15,7 @@ import styles from '../styles/Home.module.css';
 
 function Home({ images }) {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="root">
       <div className="main-bg">
         <Image
           src="/bg.jpg"
@@ -38,7 +38,7 @@ function Home({ images }) {
       <NavBar />
 
       <main className={styles.main}>
-        <div className={styles.topPanel}>
+        <div className={styles.topPanel} id="home">
 
           <header>
             <h1>Rafin Bass Fishing Guides At El Oviachic</h1>
