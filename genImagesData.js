@@ -12,6 +12,7 @@ const images = imageNames.map(imgName => {
     src: `/gallery_images/${imgName}`,
     width: dimensions.width,
     height: dimensions.height,
+    alt: "Fishing bass at Lake Oviachic with Rafin, Amigo Style!",
   }
 });
 
